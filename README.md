@@ -208,6 +208,5 @@ xmake clean
 - 生成 VS Code 提示：`xmake project -k compile_commands ./.vscode`
 
 ---
-后续
-- 为中国大陆网络环境提供一键镜像/代理脚本，减少首次构建时间。
-- 在应用启动时检测 GPU/OpenGL 能力，给出更友好的提示。
+备注：
+- 一定要有一个靠得住的梯子设置代理才方便
