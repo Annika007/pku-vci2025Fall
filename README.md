@@ -26,7 +26,7 @@
 
 4) 打开 PowerShell，进入项目目录（请按你的实际路径修改）
    ```powershell
-   cd "D:\wangziyou\北京大学课程\大二上\pku-vcl\vci-2025"
+   cd "D:\\\\\\"
    ```
 
 5) 首次构建（自动下载依赖、编译所有目标）
@@ -208,9 +208,6 @@ xmake clean
 - 生成 VS Code 提示：`xmake project -k compile_commands ./.vscode`
 
 ---
-
-## 八、后续改进想法
-
-- 在 `README.md` 中加入每个 Lab 的运行与评测说明链接，统一入口。
+后续
 - 为中国大陆网络环境提供一键镜像/代理脚本，减少首次构建时间。
 - 在应用启动时检测 GPU/OpenGL 能力，给出更友好的提示。
