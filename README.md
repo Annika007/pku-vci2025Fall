@@ -150,6 +150,29 @@ xmake clean
 
 - 已装 Visual Studio 仍被提示未找到
   - 确认 Visual Studio 安装路径不包含中文；安装器中勾选最新的生成工具与 C++ 组件。
+ 
+- 关于将项目上传到github上遇到的问题
+  - 本项目是从gitee上经过如下步骤克隆到本地的
+    - git clone https://gitee.com/pku-vcl/vci-2025
+    - git checkout lab0
+   
+  - gitee已经占用了origin分支，需要重新建立github仓库分支的联系
+    - git remote add github https://github.com/Annika007/pku-vci2025Fall.git
+    - 
+    - 本项目体积过大，用https方式传送会占用很多线程，速度慢且项目推送过程中会中断
+    - # 切换到 SSH 方式
+git remote set-url github git@github.com:Annika007/pku-vci2025Fall.git
+    - # 增加缓冲区大小
+git config http.postBuffer 524288000
+    - # 尝试再次推送
+git push -u github lab0
+    - 网络无法连接到 GitHub（端口 443 连接失败）如何解决
+       - 使用VPN时调整Git代理设置
+若在使用VPN后出现此问题，可能是系统端口号与Git端口号不一致。可以查询代理端口，然后设置Git端口号：
+         git config --global http.proxy 127.0.0.1:****
+         git config --global https.proxy 127.0.0.1:****
+         验证设置：git config --global -L
+
 
 ---
 
